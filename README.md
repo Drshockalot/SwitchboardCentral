@@ -5,6 +5,8 @@ Database Assignment
 
 PROGRESS: LATEST NEWS AT TOP
 ===============
+Made quite a large overhaul on the way that we go around the PC list of the database, I got rid of PCALLOCATION completely, just using LOCATIONID as a foreign key within the PC table. Also, due to new information gained from John from Monday's lecture/help session, the PC table (now called PCALLOCATION) now only had 3 fields (PCID, PCROLE, LOCATIONID). The only part of data loading that should be left is getting around the issue of setting date data types in a couple of the tables. POST TIME: 14:42 - 07/04/2014 (CHAD)
+
 The base constraints are now implemented into the tables of the database, I had to go through and modify a couple fields of the EQUIPMENTALLOCATION table, just because of some misspelt data that didn't get caught in the update statement, which resulted in the EQUIPMENTID field being left blank. Apart from that, any non essential constraints still need to be put in (NOT NULL etc), the data types of each field needs to be looked over and set to something sensible as well. The data dictionary needs to be updated with the new data structure that I made, but I am looking to make a couple more changes over the next couple days so that might not be worth doing yet. I gave you guys permissions on the new set of tables.
 POST TIME: 00:33 - 06/04/2014 (CHAD)
 
