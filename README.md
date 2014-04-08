@@ -5,6 +5,8 @@ Database Assignment
 
 PROGRESS: LATEST NEWS AT TOP
 ===============
+All of the data SHOULD be loaded in correctly now, the dates have been sorted into the proper data type and format now so that should be able to be used for the queries. The next step that I will be tackling is to start progressing through all of the documentation that we have to do, starting with the documentation stating the changes that we made with the final ERD. POST TIME: 10:51 - 08/04/2014 (CHAD)
+
 I made a start on the SQL Queries so we dont have to worry about fiddling them out, they just need implimenting onto a webpage when the time comes which should be easy when you see them. (SQLQueries.sql) POST TIME: 15:56 - 07/04/2014 (LUKE)
 
 Made quite a large overhaul on the way that we go around the PC list of the database, I got rid of PCALLOCATION completely, just using LOCATIONID as a foreign key within the PC table. Also, due to new information gained from John from Monday's lecture/help session, the PC table (now called PCALLOCATION) now only had 3 fields (PCID, PCROLE, LOCATIONID). The only part of data loading that should be left is getting around the issue of setting date data types in a couple of the tables. POST TIME: 14:42 - 07/04/2014 (CHAD)
