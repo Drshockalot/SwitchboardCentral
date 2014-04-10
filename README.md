@@ -7,18 +7,18 @@ This section will keep track of all of the things we have left to do for this as
 
 __Tasks__
 
---FINAL SYSTEM ERD-- (CHAD) (REVIEW)
-  ~ Documentation of consolidated changes || (CHAD)
++--FINAL SYSTEM ERD-- (CHAD) (REVIEW)
+  + Documentation of consolidated changes || (CHAD)
   
---DATABASE DICTIONARY/SPECIFICATION--
-  ~. Database dictionary on word/excel, this needs work || 
-  ~. Comments explaining purpose of columns/constraints || 
++--DATABASE DICTIONARY/SPECIFICATION--
+  +~. Database dictionary on word/excel, this needs work || 
+  +~. Comments explaining purpose of columns/constraints || 
 
---DATABASE CREATION SCRIPT--
-  ~ Script made || 
-  ~ Script split into Database creation/data insertion (needed? I think it's a good idea) ||
-  ~ Made sure EVERYTHING is included in the script (sequences/triggers etc.) ||
-  ~ Code commented || 
++--DATABASE CREATION SCRIPT--
+ +~ Script made || 
+  +~ Script split into Database creation/data insertion (needed? I think it's a good idea) ||
+  +~ Made sure EVERYTHING is included in the script (sequences/triggers etc.) ||
+  +~ Code commented || 
 
 --DATA LOADING-- (CHAD) (REVIEW)
   ~ Data loaded || (CHAD) (REVIEW - I believe all of the data is loaded correctly, but I need you guys to go through                              it to see if you can find any faults)
