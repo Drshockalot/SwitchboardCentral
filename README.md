@@ -11,8 +11,8 @@ __Tasks__
   ~ Documentation of consolidated changes || (CHAD)
   
 --DATABASE DICTIONARY/SPECIFICATION--
-  ~ Database dictionary on word/excel, this needs work || 
-  ~ Comments explaining purpose of columns/constraints || 
+  ~. Database dictionary on word/excel, this needs work || 
+  ~. Comments explaining purpose of columns/constraints || 
 
 --DATABASE CREATION SCRIPT--
   ~ Script made || 
