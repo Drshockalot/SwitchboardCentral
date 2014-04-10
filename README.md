@@ -7,8 +7,9 @@ This section will keep track of all of the things we have left to do for this as
 
 __Tasks__
 
---FINAL SYSTEM ERD-- (CHAD) (REVIEW)
-  * Documentation of consolidated changes || (CHAD)
+--FINAL SYSTEM ERD-- 
+  * Final ERD diagram || (CHAD) (REVIEW)
+  * Documentation of consolidated changes || (CHAD) (REVIEW)
   
 --DATABASE DICTIONARY/SPECIFICATION--
   * Database dictionary on word/excel, this needs work || 
@@ -46,6 +47,9 @@ As can be seen, if we really want top marks in this assignment it is going to ta
   
 PROGRESS: LATEST NEWS AT TOP
 ===============
+I have done a page of documentation for the final ERD about the changes that we made to it, I tried to remember the feedback that Jan gave to you guys, but please do review it and add stuff that I have missed, the more the better.
+POST TIME: 22:11 - 10/04/2014 (CHAD)
+
 I have buffed up the final ERD, put sensible words on the relationships, added arrows etc etc, you guys need to look at it and say whether or not you are happy with it. I am just in the process of doing the documentation for it right now but that shouldn't take too long and I'll crack on with the data loading documentation. 
 POST TIME: 14:16 - 10/04/2014 (CHAD)
 
