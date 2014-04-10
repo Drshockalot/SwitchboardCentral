@@ -15,7 +15,7 @@ __Tasks__
   * Comments explaining purpose of columns/constraints || 
 
 --DATABASE CREATION SCRIPT--
-  *Script made || 
+  * Script made || 
   * Script split into Database creation/data insertion (needed? I think it's a good idea) ||
   * Made sure EVERYTHING is included in the script (sequences/triggers etc.) ||
   * Code commented || 
