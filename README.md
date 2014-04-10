@@ -46,6 +46,9 @@ As can be seen, if we really want top marks in this assignment it is going to ta
   
 PROGRESS: LATEST NEWS AT TOP
 ===============
+I have buffed up the final ERD, put sensible words on the relationships, added arrows etc etc, you guys need to look at it and say whether or not you are happy with it. I am just in the process of doing the documentation for it right now but that shouldn't take too long and I'll crack on with the data loading documentation. 
+POST TIME: 14:16 - 10/04/2014 (CHAD)
+
 All of the data SHOULD be loaded in correctly now, the dates have been sorted into the proper data type and format now so that should be able to be used for the queries. The next step that I will be tackling is to start progressing through all of the documentation that we have to do, starting with the documentation stating the changes that we made with the final ERD. POST TIME: 10:51 - 08/04/2014 (CHAD)
 
 I made a start on the SQL Queries so we dont have to worry about fiddling them out, they just need implimenting onto a webpage when the time comes which should be easy when you see them. (SQLQueries.sql) POST TIME: 15:56 - 07/04/2014 (LUKE)
