@@ -8,29 +8,29 @@ This section will keep track of all of the things we have left to do for this as
 __Tasks__
 
 +FINAL SYSTEM ERD-- (CHAD) (REVIEW)
-  ..* Documentation of consolidated changes || (CHAD)
+  * Documentation of consolidated changes || (CHAD)
   
 +DATABASE DICTIONARY/SPECIFICATION--
-  ..* Database dictionary on word/excel, this needs work || 
-  ..* Comments explaining purpose of columns/constraints || 
+  * Database dictionary on word/excel, this needs work || 
+  * Comments explaining purpose of columns/constraints || 
 
 +DATABASE CREATION SCRIPT--
- + Script made || 
-  +~ Script split into Database creation/data insertion (needed? I think it's a good idea) ||
-  +~ Made sure EVERYTHING is included in the script (sequences/triggers etc.) ||
-  +~ Code commented || 
+  *Script made || 
+  * Script split into Database creation/data insertion (needed? I think it's a good idea) ||
+  * Made sure EVERYTHING is included in the script (sequences/triggers etc.) ||
+  * Code commented || 
 
---DATA LOADING-- (CHAD) (REVIEW)
-  ~ Data loaded || (CHAD) (REVIEW - I believe all of the data is loaded correctly, but I need you guys to go through                              it to see if you can find any faults)
-  ~ Script for insertion of data ||
-  ~ Detailed written description of data loading strategy and procedure || (CHAD)
-  ~ Data mapping document relating source data to database tables/columns || 
++DATA LOADING-- (CHAD) (REVIEW)
+  * Data loaded || (CHAD) (REVIEW - I believe all of the data is loaded correctly, but I need you guys to go through                              it to see if you can find any faults)
+  * Script for insertion of data ||
+  * Detailed written description of data loading strategy and procedure || (CHAD)
+  * Data mapping document relating source data to database tables/columns || 
   
---DATA TAKE ON TESTING--
-  ~ Simple manual checks || 
-  ~ Sql scripts to check certain aspects (row/column counts? primary key checks? unique checks?) || 
-  ~ Sql scripts to run/rerun systematic and comprehensive checks || 
-  ~ Outline/detailed description of data loading strategy and proceduere, including the problems encountered and how        they where resolved || (CHAD)
++DATA TAKE ON TESTING--
+  * Simple manual checks || 
+  * Sql scripts to check certain aspects (row/column counts? primary key checks? unique checks?) || 
+  * Sql scripts to run/rerun systematic and comprehensive checks || 
+  * Outline/detailed description of data loading strategy and proceduere, including the problems encountered and how        they where resolved || (CHAD)
 
 --SQL Queries--
   ~ Query 1 ||
