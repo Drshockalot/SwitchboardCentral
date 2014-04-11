@@ -11,7 +11,7 @@ __Tasks__
   * Final ERD diagram || (CHAD) (REVIEW)
   * Documentation of consolidated changes || (CHAD) (REVIEW)
   
---DATABASE DICTIONARY/SPECIFICATION--
+--DATABASE DICTIONARY/SPECIFICATION-- (SHAUN)
   * Database dictionary on word/excel, this needs work || 
   * Comments explaining purpose of columns/constraints || 
 
