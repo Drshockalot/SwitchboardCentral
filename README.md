@@ -16,14 +16,14 @@ __Tasks__
   * Comments explaining purpose of columns/constraints || 
 
 --DATABASE CREATION SCRIPT--
-  * Script made || 
-  * Script split into Database creation/data insertion (needed? I think it's a good idea) ||
-  * Made sure EVERYTHING is included in the script (sequences/triggers etc.) ||
+  * Script made || (CHAD)
+  * Script split into Database creation/data insertion (needed? I think it's a good idea) || (CHAD)
+  * Made sure EVERYTHING is included in the script (sequences/triggers etc.) || (CHAD)
   * Code commented || 
 
 --DATA LOADING-- (CHAD) (REVIEW)
   * Data loaded || (CHAD) (REVIEW - I believe all of the data is loaded correctly, but I need you guys to go through                              it to see if you can find any faults)
-  * Script for insertion of data ||
+  * Script for insertion of data || (CHAD)
   * Detailed written description of data loading strategy and procedure || (CHAD) (REVIEW)
   * Data mapping document relating source data to database tables/columns || 
   
