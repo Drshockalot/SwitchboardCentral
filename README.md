@@ -24,14 +24,14 @@ __Tasks__
 --DATA LOADING-- (CHAD) (REVIEW)
   * Data loaded || (CHAD) (REVIEW - I believe all of the data is loaded correctly, but I need you guys to go through                              it to see if you can find any faults)
   * Script for insertion of data ||
-  * Detailed written description of data loading strategy and procedure || (CHAD)
+  * Detailed written description of data loading strategy and procedure || (CHAD) (REVIEW)
   * Data mapping document relating source data to database tables/columns || 
   
 --DATA TAKE ON TESTING-- (LUKE)
   * Simple manual checks || 
   * Sql scripts to check certain aspects (row/column counts? primary key checks? unique checks?) || 
   * Sql scripts to run/rerun systematic and comprehensive checks || 
-  * Outline/detailed description of data loading strategy and proceduere, including the problems encountered and how        they where resolved || (CHAD)
+  * Outline/detailed description of data loading strategy and proceduere, including the problems encountered and how        they where resolved || (CHAD) (REVIEW)
 
 --SQL Queries--
   * Query 1 || (LUKE)
