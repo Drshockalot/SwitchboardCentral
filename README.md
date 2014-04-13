@@ -27,15 +27,15 @@ __Tasks__
   * Detailed written description of data loading strategy and procedure || (CHAD)
   * Data mapping document relating source data to database tables/columns || 
   
---DATA TAKE ON TESTING--
+--DATA TAKE ON TESTING-- (LUKE)
   * Simple manual checks || 
   * Sql scripts to check certain aspects (row/column counts? primary key checks? unique checks?) || 
   * Sql scripts to run/rerun systematic and comprehensive checks || 
   * Outline/detailed description of data loading strategy and proceduere, including the problems encountered and how        they where resolved || (CHAD)
 
 --SQL Queries--
-  * Query 1 ||
-  * Query 2 ||
+  * Query 1 || (LUKE)
+  * Query 2 || (LUKE)
   * Query 3 ||
   * Query 4 ||
   * Query 5 ||
