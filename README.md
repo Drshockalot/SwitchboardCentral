@@ -31,7 +31,7 @@ __Tasks__
   * Simple manual checks || (LUKE)
   * Sql scripts to check certain aspects (row/column counts? primary key checks? unique checks?) || (LUKE)
   * Sql scripts to run/rerun systematic and comprehensive checks || 
-  * Outline/detailed description of data loading strategy and proceduere, including the problems encountered and how        they where resolved || (CHAD) (REVIEW)
+  * Outline/detailed description of data loading strategy and proceduere, including the problems encountered and how they where resolved || (CHAD) (REVIEW)
 
 --SQL Queries--
   * Query 1 || (LUKE)
