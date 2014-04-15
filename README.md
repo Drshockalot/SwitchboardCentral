@@ -25,11 +25,11 @@ __Tasks__
   * Data loaded || (CHAD) (REVIEW - I believe all of the data is loaded correctly, but I need you guys to go through                              it to see if you can find any faults)
   * Script for insertion of data || (CHAD)
   * Detailed written description of data loading strategy and procedure || (CHAD) (REVIEW)
-  * Data mapping document relating source data to database tables/columns || 
+  * Data mapping document relating source data to database tables/columns || (LUKE?* Not sure if i did this in the data dictionary)
   
---DATA TAKE ON TESTING-- (LUKE)
-  * Simple manual checks || 
-  * Sql scripts to check certain aspects (row/column counts? primary key checks? unique checks?) || 
+--DATA TAKE ON TESTING-- 
+  * Simple manual checks || (LUKE)
+  * Sql scripts to check certain aspects (row/column counts? primary key checks? unique checks?) || (LUKE)
   * Sql scripts to run/rerun systematic and comprehensive checks || 
   * Outline/detailed description of data loading strategy and proceduere, including the problems encountered and how        they where resolved || (CHAD) (REVIEW)
 
@@ -47,6 +47,8 @@ As can be seen, if we really want top marks in this assignment it is going to ta
   
 PROGRESS: LATEST NEWS AT TOP
 ===============
+If someone could have a look at Query 3 that would be good as im having trouble getting my head around it, Also i have started the data testing sheet which needs looking at. (LUKE)
+
 I have done a page of documentation for the final ERD about the changes that we made to it, I tried to remember the feedback that Jan gave to you guys, but please do review it and add stuff that I have missed, the more the better.
 POST TIME: 22:11 - 10/04/2014 (CHAD)
 
