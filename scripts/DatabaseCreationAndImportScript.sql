@@ -1997,7 +1997,7 @@ Insert into STAFF (STAFFID,NAME,JOB,WORKPHONENO,HOMEPHONENO,EMAIL,ADDRESS,POSTCO
 --------------------------------------------------------
 
   CREATE OR REPLACE TRIGGER "BUILDINGID_TRIG" 
-   before insert on "BUILDING" 
+   BEFORE INSERT ON "BUILDING"
    for each row 
 begin  
    if inserting then 
@@ -2005,14 +2005,15 @@ begin
          select BUILDINGID_SEQ.nextval into :NEW."BUILDINGID" from dual; 
       end if; 
    end if; 
-end if;
+end;
 
 ALTER TRIGGER "BUILDINGID_TRIG" ENABLE;
+/
 --------------------------------------------------------
 --  DDL for Trigger EQUIPMENT_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE TRIGGER "EQUIPMENT_TRG" BEFORE INSERT ON EQUIPMENT 
+  CREATE OR REPLACE TRIGGER "EQUIPMENT_TRG" BEFORE INSERT ON EQUIPMENT
 FOR EACH ROW 
 BEGIN
   <<COLUMN_SEQUENCES>>
@@ -2022,12 +2023,13 @@ BEGIN
     END IF;
   END COLUMN_SEQUENCES;
 END;
-ALTER TRIGGER "EQUIPMENT_TRG" ENABLE
+/
+ALTER TRIGGER "EQUIPMENT_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger EVENT_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE TRIGGER "EVENT_TRG" BEFORE INSERT ON EVENT 
+  CREATE OR REPLACE TRIGGER "EVENT_TRG" BEFORE INSERT ON EVENT
 FOR EACH ROW 
 BEGIN
   <<COLUMN_SEQUENCES>>
@@ -2037,12 +2039,13 @@ BEGIN
     END IF;
   END COLUMN_SEQUENCES;
 END;
-ALTER TRIGGER "EVENT_TRG" ENABLE
+/
+ALTER TRIGGER "EVENT_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger LOCATION_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE TRIGGER "LOCATION_TRG" BEFORE INSERT ON LOCATION 
+  CREATE OR REPLACE TRIGGER "LOCATION_TRG" BEFORE INSERT ON LOCATION
 FOR EACH ROW 
 BEGIN
   <<COLUMN_SEQUENCES>>
@@ -2052,12 +2055,13 @@ BEGIN
     END IF;
   END COLUMN_SEQUENCES;
 END;
-ALTER TRIGGER "LOCATION_TRG" ENABLE
+/
+ALTER TRIGGER "LOCATION_TRG" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger STAFF_TRG
 --------------------------------------------------------
 
-  CREATE OR REPLACE TRIGGER "STAFF_TRG" BEFORE INSERT ON STAFF 
+  CREATE OR REPLACE TRIGGER "STAFF_TRG" BEFORE INSERT ON STAFF
 FOR EACH ROW 
 BEGIN
   <<COLUMN_SEQUENCES>>
@@ -2067,4 +2071,5 @@ BEGIN
     END IF;
   END COLUMN_SEQUENCES;
 END;
-ALTER TRIGGER "STAFF_TRG" ENABLE
+/
+ALTER TRIGGER "STAFF_TRG" ENABLE;
