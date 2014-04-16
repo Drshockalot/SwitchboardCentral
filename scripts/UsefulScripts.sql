@@ -98,3 +98,7 @@ SET ENDDATE = (SELECT TO_DATE(TO_CHAR(BOOKINGDATE || ' ' || ENDTIME), 'dd-mm-yy 
                WHERE TEMPDATES.EVENTID = 110015);
 
 SELECT TO_CHAR(EVENTEND, 'yyyy-mm-dd hh24:mi:ss') as EVENTEND FROM BOOKING;
+
+SELECT LOCATIONID, EVENTID, TO_CHAR(EVENTSTART, 'yyyy-mm-dd hh24:mi:ss') as EVENTSTART,TO_CHAR(EVENTEND, 'yyyy-mm-dd hh24:mi:ss') as EVENTEND FROM BOOKING;
+
+Insert into BOOKING (LOCATIONID,EVENTID,EVENTSTART,EVENTEND) values (110015,100,to_date('04-OCT-13 12:30:00','yyyy-mm-dd hh24:mi:ss'),to_date('04-OCT-13 13:00:00','yyyy-mm-dd hh24:mi:ss'));

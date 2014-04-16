@@ -1,6 +1,7 @@
---------------------------------------------------------
---  File created - Tuesday-April-15-2014   
---------------------------------------------------------
+/*
+  THIS SCRIPT PERFORMS THE FOLLOWING ACTIONS:
+  - Drops 
+*/
 DROP TABLE "BOOKING" cascade constraints;
 DROP TABLE "BUILDING" cascade constraints;
 DROP TABLE "CONFIGURATION" cascade constraints;
