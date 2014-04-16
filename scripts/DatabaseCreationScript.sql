@@ -1,6 +1,10 @@
 /*
   THIS SCRIPT PERFORMS THE FOLLOWING ACTIONS:
-  - Drops 
+  - Drops all of the current tables of the relevant database, if they exist. 
+  - Drops current versions of sequences with the same name as those associated with this database
+  - Recreates sequences for all surrogate keys associated with Primary Keys in this database
+  - Creates all of the tables necessary for this database
+  - Performs GRANT 
 */
 DROP TABLE "BOOKING" cascade constraints;
 DROP TABLE "BUILDING" cascade constraints;
