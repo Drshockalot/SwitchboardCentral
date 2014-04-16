@@ -11,19 +11,19 @@ __Tasks__
   * Final ERD diagram || (CHAD) (REVIEW)
   * Documentation of consolidated changes || (CHAD) (REVIEW)
   
---DATABASE DICTIONARY/SPECIFICATION-- (SHAUN)
-  * Database dictionary on word/excel, this needs work || 
-  * Comments explaining purpose of columns/constraints || 
+--DATABASE DICTIONARY/SPECIFICATION-- 
+  * Database dictionary on word/excel, this needs work || (SHAUN) (REVIEW)
+  * Comments explaining purpose of columns/constraints || (SHAUN) (REVIEW)
 
 --DATABASE CREATION SCRIPT--
-  * Script made || (CHAD)
-  * Script split into Database creation/data insertion (needed? I think it's a good idea) || (CHAD)
-  * Made sure EVERYTHING is included in the script (sequences/triggers etc.) || (CHAD)
-  * Code commented || 
+  * Script made || (CHAD) (REVIEW)
+  * Script split into Database creation/data insertion (needed? I think it's a good idea) || (CHAD) (REVIEW)
+  * Made sure EVERYTHING is included in the script (sequences/triggers etc.) || (CHAD) (REVIEW)
+  * Code commented || (CHAD) (REVIEW)
 
---DATA LOADING-- (CHAD) (REVIEW)
-  * Data loaded || (CHAD) (REVIEW - I believe all of the data is loaded correctly, but I need you guys to go through                              it to see if you can find any faults)
-  * Script for insertion of data || (CHAD)
+--DATA LOADING--
+  * Data loaded || (CHAD) (REVIEW - I believe all of the data is loaded correctly, but I need you guys to go through it to see if you can find any faults)
+  * Script for insertion of data || (CHAD) (REVIEW)
   * Detailed written description of data loading strategy and procedure || (CHAD) (REVIEW)
   * Data mapping document relating source data to database tables/columns || (LUKE?* Not sure if i did this in the data dictionary)
   
@@ -47,6 +47,8 @@ As can be seen, if we really want top marks in this assignment it is going to ta
   
 PROGRESS: LATEST NEWS AT TOP
 ===============
+Updated our tasks, we are getting there in terms of 
+
 If someone could have a look at Query 3 that would be good as im having trouble getting my head around it, Also i have started the data testing sheet which needs looking at. (LUKE)
 
 I have done a page of documentation for the final ERD about the changes that we made to it, I tried to remember the feedback that Jan gave to you guys, but please do review it and add stuff that I have missed, the more the better.
