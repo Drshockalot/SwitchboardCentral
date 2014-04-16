@@ -4,7 +4,10 @@
   - Drops current versions of sequences with the same name as those associated with this database
   - Recreates sequences for all surrogate keys associated with Primary Keys in this database
   - Creates all of the tables necessary for this database
-  - Performs GRANT 
+  - Performs GRANT statements on all of the tables to the appropriate team members
+  - Creates indexes for Primary Keys used for each table
+  - Creates necessary constraints for each table (Foreign Key, UNIQUE, NOT NULL, DEFAULT etc)
+  - Creates Triggers for each sequence
 */
 DROP TABLE "BOOKING" cascade constraints;
 DROP TABLE "BUILDING" cascade constraints;

@@ -1,4 +1,19 @@
-/* */
+/* 
+  THIS SCRIPT PERFORMS THE FOLLOWING ACTIONS:
+    - Inserts data into the following Tables and Columns:
+      ~ Building (BUILDINGNAME, CAMPUS, ADDRESS, RECEPTIONPHONENO, BUILDINGID)
+      ~ Location (LOCATIONID,FLOOR,TYPE,ROOMNO,CURRENTCONFIG,LENGTH,WIDTH,BUILDINGID)
+      ~ Staff (STAFFID,NAME,JOB,WORKPHONENO,HOMEPHONENO,EMAIL,ADDRESS,POSTCODE,LOCATIONID)
+      ~ Event (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,ORGANISER,STAFFID)
+      ~ Booking (LOCATIONID,EVENTID,EVENTSTART,EVENTEND)
+      ~ Configuration (LOCATIONID,ROWCAPACITY,ISLANDCAPACITY,HORSESHOECAPACITY)
+      ~ Equipment (EQUIPMENTID,NAME,TYPE,MAKE,DESCRIPTION,CATEGORY)
+      ~ Equipment Allocation (LOCATIONID,EQUIPMENTID,QUANTITY)
+      ~ PC Allocation (PCID,PCROLE,LOCATIONID)
+      
+  This database script ensures that it is able to still import if constraints such as Primary Keys or Foreign Keys are in place.
+  To make sure of this, the data import is ordered in a way that the tables that have Primary Keys used as Foreign Keys are loaded first. 
+*/
 
 REM INSERTING into BUILDING
 SET DEFINE OFF;
