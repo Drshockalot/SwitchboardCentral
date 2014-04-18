@@ -28,4 +28,11 @@ from booking where booking.bookingdate = '04/11/2013'
 and booking.endtime = '12:00'  ) 
 group by location.type, location.roomno, location.floor, building.buildingname;
 
-select booking.locationid from booking where booking.bookingdate = '04/11/2013' and booking.endtime = '12:00';
+/*Query 4*/
+
+INSERT INTO EVENT (EVENTNAME, EVENTPURPOSE, STAFFID)
+VALUES ('&iEventName', '&iEventPurpose', (SELECT STAFFID FROM STAFF WHERE STAFF.NAME = '&organiser'));
+
+/*Query 5*/
+
+

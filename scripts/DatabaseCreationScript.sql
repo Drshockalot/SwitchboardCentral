@@ -9,6 +9,7 @@
   - Creates necessary constraints for each table (Foreign Key, UNIQUE, NOT NULL, DEFAULT etc)
   - Creates Triggers for each sequence
 */
+
 DROP TABLE "BOOKING" cascade constraints;
 DROP TABLE "BUILDING" cascade constraints;
 DROP TABLE "CONFIGURATION" cascade constraints;
