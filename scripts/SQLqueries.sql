@@ -1,38 +1,79 @@
 /*Query 1*/
 
-select staff.name as staff_name, staff.workphoneno as Work, staff.homephoneno as Home
-from staff
-inner join location on staff.locationid = location.locationid 
-inner join building on location.buildingid = building.buildingid
-where building.buildingname = 'Allardyce';
+SELECT STAFF.NAME AS STAFF_NAME, STAFF.WORKPHONENO AS WORK_PHONE, STAFF.HOMEPHONENO AS HOME_PHONE
+FROM STAFF
+INNER JOIN LOCATION
+ON STAFF.LOCATIONID = LOCATION.LOCATIONID
+INNER JOIN BUILDING
+ON LOCATION.BUILDINGID = BUILDING.BUILDINGID
+WHERE BUILDING.BUILDINGNAME = :User_Input_BuildingName;
 
 /*Query 2*/
 
-select equipment.name as equipment_name, equipmentallocation.quantity,location.roomno as room_number,location.floor ,location.type as room_type
-from equipmentallocation 
-inner join equipment on equipmentallocation.equipmentid = equipment.equipmentid 
-inner join location on equipmentallocation.locationid = location.locationid 
-inner join building on location.buildingid = building.buildingid 
-where building.buildingname = 'Devon' and location.roomno is not null and location.currentconfig is not null and equipmentallocation.locationid is not null; 
+SELECT EQUIPMENT.NAME AS EQUIPMENT_NAME, EQUIPMENTALLOCATION.QUANTITY, LOCATION.ROOMNO AS ROOM_NUMBER, LOCATION.FLOOR, LOCATION.TYPE AS ROOM_TYPE
+FROM EQUIPMENTALLOCATION
+INNER JOIN EQUIPMENT
+ON EQUIPMENTALLOCATION.EQUIPMENTID = EQUIPMENT.EQUIPMENTID
+INNER JOIN LOCATION 
+ON EQUIPMENTALLOCATION.LOCATIONID = LOCATION.LOCATIONID
+INNER JOIN BUILDING
+ON LOCATION.BUILDINGID = BUILDING.BUILDINGID
+WHERE BUILDING.BUILDINGNAME = :User_Input_BuildingName
+        AND
+      LOCATION.ROOMNO IS NOT NULL
+        AND
+      LOCATION.CURRENTCONFIG IS NOT NULL
+        AND
+      EQUIPMENTALLOCATION.LOCATIONID IS NOT NULL;
+      
+/*Query 3*/
 
-/*Query 3 needs workin out*/
-
-Select location.type, location.roomno, location.floor, building.buildingname
-from location 
-inner join building on location.buildingid = building.buildingid 
-inner join configuration on location.locationid = configuration.locationid
-where building.buildingname = 'Devon' and configuration.rowcapacity >= 10 
-and location.locationid = 
-(select booking.locationid 
-from booking where booking.bookingdate = '04/11/2013' 
-and booking.endtime = '12:00'  ) 
-group by location.type, location.roomno, location.floor, building.buildingname;
+SELECT LOCATION.LOCATIONID, LOCATION.ROOMNO, LOCATION.TYPE, LOCATION.FLOOR, BUILDING.BUILDINGNAME, CONFIGURATION.CURRENTCONFIG, 
+       CONFIGURATION.ISLANDCAPACITY, CONFIGURATION.HORSESHOECAPACITY, CONFIGURATION.ROWCAPACITY
+FROM LOCATION
+INNER JOIN CONFIGURATION
+ON LOCATION.LOCATIONID = CONFIGURATION.LOCATIONID
+INNER JOIN BUILDING
+ON LOCATION.BUILDINGID = BUILDING.BUILDINGID
+WHERE LOCATION.LOCATIONID NOT IN 
+( 
+  SELECT DISTINCT LOCATIONID 
+  FROM BOOKING 
+  WHERE 
+  (
+    (TO_DATE(:User_Input_Event_Start, 'dd-mm-rrrr hh24:mi') BETWEEN EVENTSTART AND EVENTEND) 
+      OR 
+    (TO_DATE(:User_Input_Event_End, 'dd-mm-rrrr hh24:mi') BETWEEN EVENTSTART AND EVENTEND) 
+      OR 
+    (TO_DATE(:User_Input_Event_Start, 'dd-mm-rrrr hh24:mi') <= EVENTSTART AND TO_DATE(:User_Input_Event_End, 'dd-mm-rrrr hh24:mi') >= EVENTEND)
+  )
+)
+  AND
+BUILDING.BUILDINGNAME = :User_Input_BuildingName
+  AND
+(
+  CONFIGURATION.ROWCAPACITY >= :User_Input_Room_Capacity
+    OR
+  CONFIGURATION.ISLANDCAPACITY >= :User_Input_Room_Capacity
+    OR
+  CONFIGURATION.HORSESHOECAPACITY >= :User_Input_Room_Capacity
+)
+  AND
+LOCATION.ROOMNO IS NOT NULL
+ORDER BY LOCATION.LOCATIONID;
 
 /*Query 4*/
 
 INSERT INTO EVENT (EVENTNAME, EVENTPURPOSE, STAFFID)
-VALUES ('&iEventName', '&iEventPurpose', (SELECT STAFFID FROM STAFF WHERE STAFF.NAME = '&organiser'));
+VALUES (:User_Input_EventName, :User_Input_EventPurpose, (SELECT STAFFID 
+                                          FROM STAFF 
+                                          WHERE STAFF.NAME = :User_Input_Organiser));
 
 /*Query 5*/
-
+INSERT INTO BOOKING (LOCATIONID, EVENTID, EVENTSTART, EVENTEND)
+VALUES ((SELECT LOCATIONID
+         FROM LOCATION
+         WHERE ROOMNO = :User_Input_RoomNo), (SELECT EVENTID
+                                              FROM EVENT
+                                              WHERE EVENTNAME = :User_Input_EventName), :User_Input_EventStart, :User_Input_EventEnd);
 
