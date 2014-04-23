@@ -25,23 +25,23 @@ __Tasks__
   * Data loaded || (CHAD) (REVIEW - I believe all of the data is loaded correctly, but I need you guys to go through it to see if you can find any faults)
   * Script for insertion of data || (CHAD) (REVIEW)
   * Detailed written description of data loading strategy and procedure || (CHAD) (REVIEW)
-  * Data mapping document relating source data to database tables/columns || (LUKE?* Not sure if i did this in the data dictionary)
+  * Data mapping document relating source data to database tables/columns || (LUKE?* Not sure if i did this in the data dictionary) (REVIEW - LOOKS GOOD)
   
 --DATA TAKE ON TESTING-- 
   * Simple manual checks || (LUKE)
   * Sql scripts to check certain aspects (row/column counts? primary key checks? unique checks?) || (LUKE)
-  * Sql scripts to run/rerun systematic and comprehensive checks || 
+  * Sql scripts to run/rerun systematic and comprehensive checks || (LUKE)
   * Outline/detailed description of data loading strategy and proceduere, including the problems encountered and how they where resolved || (CHAD) (REVIEW)
 
 --SQL Queries--
-  * Query 1 || (LUKE)
-  * Query 2 || (LUKE)
-  * Query 3 ||
-  * Query 4 ||
-  * Query 5 ||
-  * Queries return valid results ||
-  * Output appropriately organised and titled ||
-  * Implemented from web-page as prepared statement ||
+  * Query 1 || (LUKE) (REVIEW)
+  * Query 2 || (LUKE) (REVIEW)
+  * Query 3 || (CHAD) (REVIEW)
+  * Query 4 || (CHAD) (REVIEW)
+  * Query 5 || (CHAD) (REVIEW)
+  * Queries return valid results || (REVIEW)
+  * Output appropriately organised and titled || (REVIEW)
+  * Implemented from web-page as prepared statement || (LUKE/SHAUN?)
   
 As can be seen, if we really want top marks in this assignment it is going to take a lot of work, so we really do need to start blasting into all of the documentation needed. 
   
