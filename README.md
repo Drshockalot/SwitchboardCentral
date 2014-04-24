@@ -28,7 +28,7 @@ __Tasks__
   * Data mapping document relating source data to database tables/columns || (LUKE?* Not sure if i did this in the data dictionary) (REVIEW - LOOKS GOOD)
   
 --DATA TAKE ON TESTING-- 
-  * Simple manual checks || (LUKE)
+  * Simple manual checks || (LUKE) (REVIEW - 10/10 A++** would check again "Amazing"-Linux magazine "Greatest manual checks of our time"-IGN "Hot shit"-John Carmack)
   * Sql scripts to check certain aspects (row/column counts? primary key checks? unique checks?) || (LUKE)
   * Sql scripts to run/rerun systematic and comprehensive checks || (LUKE)
   * Outline/detailed description of data loading strategy and proceduere, including the problems encountered and how they where resolved || (CHAD) (REVIEW)
@@ -41,7 +41,7 @@ __Tasks__
   * Query 5 || (CHAD) (REVIEW)
   * Queries return valid results || (REVIEW)
   * Output appropriately organised and titled || (REVIEW)
-  * Implemented from web-page as prepared statement || (LUKE/SHAUN?)
+  * Implemented from web-page as prepared statement || (LUKE/SHAUN)
   
 As can be seen, if we really want top marks in this assignment it is going to take a lot of work, so we really do need to start blasting into all of the documentation needed. 
   
