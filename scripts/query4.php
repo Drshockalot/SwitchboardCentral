@@ -2,30 +2,25 @@
 
 // Connect to the Oracle database
 require('connection.php'); 
-$buildingname = "Allerdyce";
+$organiser = "Dave Whitburn";
+$eventname = "queryevent";
+$eventpurpose = "queryeventpurpose";
 // Specify SQL STATEMENT CONTAINING A BIND VARIABLE  
 
-$query1 = "SELECT EQUIPMENT.NAME AS EQUIPMENT_NAME, EQUIPMENTALLOCATION.QUANTITY, LOCATION.ROOMNO AS ROOM_NUMBER, LOCATION.FLOOR, LOCATION.TYPE AS ROOM_TYPE
-FROM EQUIPMENTALLOCATION
-INNER JOIN EQUIPMENT
-ON EQUIPMENTALLOCATION.EQUIPMENTID = EQUIPMENT.EQUIPMENTID
-INNER JOIN LOCATION 
-ON EQUIPMENTALLOCATION.LOCATIONID = LOCATION.LOCATIONID
-INNER JOIN BUILDING
-ON LOCATION.BUILDINGID = BUILDING.BUILDINGID
-WHERE BUILDING.BUILDINGNAME = :User_Input_BuildingName
-        AND
-      LOCATION.ROOMNO IS NOT NULL
-        AND
-      LOCATION.CURRENTCONFIG IS NOT NULL
-        AND
-      EQUIPMENTALLOCATION.LOCATIONID IS NOT NULL";
+$query1 = "INSERT INTO EVENT (EVENTNAME, EVENTPURPOSE, STAFFID)
+VALUES (:User_Input_EventName, :User_Input_EventPurpose, (SELECT STAFFID 
+                                          FROM STAFF 
+                                          WHERE STAFF.NAME = :User_Input_Organiser));";
 
 // Parse the query containing a bind variable.
 $stmt = oci_parse($conn, $query1);
  
 // Bind the value into the parsed statement.
-oci_bind_by_name($stmt, ':user_Input_BuildingName', $buildingname);
+oci_bind_by_name($stmt, ':User_Input_EventName', $eventname);
+oci_bind_by_name($stmt, ':User_Input_EventPurpose', $eventpurpose);
+oci_bind_by_name($stmt, ':User_Input_Organiser', $organiser);
+
+
  
 // Execute the completed statement.
 oci_execute($stmt);
