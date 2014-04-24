@@ -8,7 +8,7 @@ $eventEnd = "10-nov-04";
 $roomCapacity = 3;
 // Specify SQL STATEMENT CONTAINING A BIND VARIABLE  
 
-$query1 = "SELECT LOCATION.LOCATIONID, LOCATION.ROOMNO, LOCATION.TYPE, LOCATION.FLOOR, BUILDING.BUILDINGNAME, CONFIGURATION.CURRENTCONFIG, 
+$query1 = "SELECT LOCATION.LOCATIONID, LOCATION.ROOMNO, LOCATION.TYPE, LOCATION.FLOOR, BUILDING.BUILDINGNAME, LOCATION.CURRENTCONFIG, 
        CONFIGURATION.ISLANDCAPACITY, CONFIGURATION.HORSESHOECAPACITY, CONFIGURATION.ROWCAPACITY
 FROM LOCATION
 INNER JOIN CONFIGURATION
@@ -46,7 +46,7 @@ ORDER BY LOCATION.LOCATIONID";
 $stmt = oci_parse($conn, $query1);
  
 // Bind the value into the parsed statement.
-oci_bind_by_name($stmt, ':user_Input_BuildingName' , $buildingname);
+oci_bind_by_name($stmt, ':User_Input_BuildingName' , $buildingname);
 oci_bind_by_name($stmt, ":User_Input_Event_Start" , $eventStart);
 oci_bind_by_name($stmt, ":User_Input_Event_End" , $eventEnd);
 oci_bind_by_name($stmt, ":User_Input_Room_Capacity" , $roomCapacity);
@@ -54,7 +54,7 @@ oci_bind_by_name($stmt, ":User_Input_Room_Capacity" , $roomCapacity);
 // Execute the completed statement.
 oci_execute($stmt);
  
-echo "<table border='1' cellpadding='5'>\n";
+ echo "<table border='1' cellpadding='5'>\n";
 while ($row = oci_fetch_array($stmt, OCI_ASSOC+OCI_RETURN_NULLS)) {
     echo "<tr>\n";
     foreach ($row as $item) {
