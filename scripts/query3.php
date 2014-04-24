@@ -48,7 +48,7 @@ $stmt = oci_parse($conn, $query1);
 // Bind the value into the parsed statement.
 oci_bind_by_name($stmt, ':user_Input_BuildingName' , $buildingname);
 oci_bind_by_name($stmt, ":User_Input_Event_Start" , $eventStart);
-oci_bind_by_name($stmt, "User_Input_Event_End" , $eventEnd);
+oci_bind_by_name($stmt, ":User_Input_Event_End" , $eventEnd);
 oci_bind_by_name($stmt, ":User_Input_Room_Capacity" , $roomCapacity);
  
 // Execute the completed statement.
