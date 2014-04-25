@@ -78,5 +78,5 @@ VALUES ((SELECT LOCATIONID
          FROM LOCATION
          WHERE ROOMNO = :User_Input_RoomNo), (SELECT EVENTID
                                               FROM EVENT
-                                              WHERE EVENTNAME = :User_Input_EventName), :User_Input_EventStart, :User_Input_EventEnd);
+                                              WHERE EVENTNAME = :User_Input_EventName), TO_DATE(:User_Input_EventStart, 'dd-mm-rrrr hh24:mi'), TO_DATE(:User_Input_EventEnd, 'dd-mm-rrrr hh24:mi'));
 
