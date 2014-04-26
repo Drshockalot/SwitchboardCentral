@@ -179,14 +179,13 @@ Insert into STAFF (STAFFID,NAME,JOB,WORKPHONENO,HOMEPHONENO,EMAIL,ADDRESS,POSTCO
 Insert into STAFF (STAFFID,NAME,JOB,WORKPHONENO,HOMEPHONENO,EMAIL,ADDRESS,POSTCODE,LOCATIONID) values (18,'Augustine Spevak','Receptionist','6303','0113 421845','y0l3rl@uat.ac.uk','The Balk, York, East Riding of Yorkshire ','YO42 2NX',110005);
 REM INSERTING into EVENT
 SET DEFINE OFF;
-Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,ORGANISER,STAFFID) values (100,null,'Seminar','Engineering','Juana Divens',12);
-Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,ORGANISER,STAFFID) values (101,null,'Meeting','H&W','Jeffry Cevallos',9);
-Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,ORGANISER,STAFFID) values (102,null,'Student Engagement Meeting','H&W','Malka Orsi',10);
-Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,ORGANISER,STAFFID) values (103,null,'Community Singing','Classics','Maryann Wengert',16);
-Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,ORGANISER,STAFFID) values (104,null,'Module Review Meeting','Computing','Everett Fuentes',14);
-Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,ORGANISER,STAFFID) values (105,null,'Student Walkthrough','Computing','Dave Whitburn',1);
-Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,ORGANISER,STAFFID) values (106,null,'Classics Fclty Mtg','Classics','Ann Wiggins',6);
-Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,ORGANISER,STAFFID) values (107,null,'Student Walkthrough','Computing','Dave Whitburn',1);
+Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,STAFFID) values (100,null,'Seminar','Engineering',12);
+Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,STAFFID) values (101,null,'Meeting','H&W',9);
+Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,STAFFID) values (102,null,'Student Engagement Meeting','H&W',10);
+Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,STAFFID) values (103,null,'Community Singing','Classics',16);
+Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,STAFFID) values (104,null,'Module Review Meeting','Computing',14);
+Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,STAFFID) values (105,null,'Student Walkthrough','Computing',1);
+Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,STAFFID) values (106,null,'Classics Fclty Mtg','Classics',6);
 
 REM INSERTING into BOOKING
 SET DEFINE OFF;
