@@ -68,14 +68,20 @@ DROP SEQUENCE "STAFF_SEQ";
 
    CREATE SEQUENCE  "STAFF_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE ;
 --------------------------------------------------------
+--  DDL for Sequence BOOKING_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "BOOKING_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 800020 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
 --  DDL for Table BOOKING
 --------------------------------------------------------
 
-  CREATE TABLE "BOOKING" 
+ CREATE TABLE "BOOKING" 
    (	"LOCATIONID" NUMBER(6,0), 
 	"EVENTID" NUMBER(6,0), 
 	"EVENTSTART" DATE DEFAULT sysdate, 
-	"EVENTEND" DATE DEFAULT sysdate
+	"EVENTEND" DATE DEFAULT sysdate, 
+	"BOOKINGID" NUMBER(6,0)
    ) ;
   GRANT FLASHBACK ON "BOOKING" TO "B2029843";
   GRANT FLASHBACK ON "BOOKING" TO "B2023876";
@@ -382,7 +388,7 @@ DROP SEQUENCE "STAFF_SEQ";
 --  DDL for Index BOOKING_PK
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "BOOKING_PK" ON "BOOKING" ("EVENTID", "LOCATIONID");
+  CREATE UNIQUE INDEX "BOOKING_PK" ON "BOOKING" ("BOOKINGID");
 --------------------------------------------------------
 --  DDL for Index EVENT_PK
 --------------------------------------------------------
@@ -465,9 +471,8 @@ DROP SEQUENCE "STAFF_SEQ";
 --  Constraints for Table BOOKING
 --------------------------------------------------------
 
-  ALTER TABLE "BOOKING" ADD CONSTRAINT "BOOKING_PK" PRIMARY KEY ("EVENTID", "LOCATIONID") ENABLE;
-  ALTER TABLE "BOOKING" MODIFY ("LOCATIONID" NOT NULL ENABLE);
-  ALTER TABLE "BOOKING" MODIFY ("EVENTID" NOT NULL ENABLE);
+  ALTER TABLE "BOOKING" ADD CONSTRAINT "BOOKING_PK" PRIMARY KEY ("BOOKINGID") ENABLE;
+  ALTER TABLE "BOOKING" MODIFY ("BOOKINGID" NOT NULL ENABLE);
 --------------------------------------------------------
 --  Constraints for Table PCALLOCATION
 --------------------------------------------------------
@@ -601,3 +606,20 @@ BEGIN
 END;
 /
 ALTER TRIGGER "STAFF_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger BOOKING_TRIG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "BOOKING_TRIG" 
+   before insert on "BOOKING" 
+   for each row 
+begin  
+   if inserting then 
+      if :NEW."BOOKINGID" is null then 
+         select BOOKING_SEQ.nextval into :NEW."BOOKINGID" from dual; 
+      end if; 
+   end if; 
+end;
+
+/
+ALTER TRIGGER "BOOKING_TRIG" ENABLE;

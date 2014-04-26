@@ -191,13 +191,12 @@ Insert into EVENT (EVENTID,EVENTNAME,EVENTPURPOSE,FACULTY,ORGANISER,STAFFID) val
 REM INSERTING into BOOKING
 SET DEFINE OFF;
 Insert into BOOKING (LOCATIONID,EVENTID,EVENTSTART,EVENTEND) values (110007,100,to_date('04-OCT-13 10:00:00','yyyy-mm-dd hh24:mi:ss'),to_date('04-OCT-13 11:00:00','yyyy-mm-dd hh24:mi:ss'));
-Insert into BOOKING (LOCATIONID,EVENTID,EVENTSTART,EVENTEND) values (110007,101,to_date('04-OCT-13 13:00:00','yyyy-mm-dd hh24:mi:ss'),to_date('04-OCT-13 13:00:00','yyyy-mm-dd hh24:mi:ss'));
-Insert into BOOKING (LOCATIONID,EVENTID,EVENTSTART,EVENTEND) values (110015,102,to_date('04-OCT-13 12:00:00','yyyy-mm-dd hh24:mi:ss'),to_date('04-OCT-13 13:30:00','yyyy-mm-dd hh24:mi:ss'));
+Insert into BOOKING (LOCATIONID,EVENTID,EVENTSTART,EVENTEND) values (110007,101,to_date('04-OCT-13 13:00:00','yyyy-mm-dd hh24:mi:ss'),to_date('04-OCT-13 13:30:00','yyyy-mm-dd hh24:mi:ss'));
+Insert into BOOKING (LOCATIONID,EVENTID,EVENTSTART,EVENTEND) values (110019,105,to_date('04-OCT-13 12:00:00','yyyy-mm-dd hh24:mi:ss'),to_date('04-OCT-13 13:30:00','yyyy-mm-dd hh24:mi:ss'));
 Insert into BOOKING (LOCATIONID,EVENTID,EVENTSTART,EVENTEND) values (110119,103,to_date('04-OCT-13 12:00:00','yyyy-mm-dd hh24:mi:ss'),to_date('04-OCT-13 13:00:00','yyyy-mm-dd hh24:mi:ss'));
 Insert into BOOKING (LOCATIONID,EVENTID,EVENTSTART,EVENTEND) values (110119,104,to_date('04-OCT-13 14:30:00','yyyy-mm-dd hh24:mi:ss'),to_date('04-OCT-13 15:30:00','yyyy-mm-dd hh24:mi:ss'));
 Insert into BOOKING (LOCATIONID,EVENTID,EVENTSTART,EVENTEND) values (110119,105,to_date('04-OCT-13 16:00:00','yyyy-mm-dd hh24:mi:ss'),to_date('04-OCT-13 17:00:00','yyyy-mm-dd hh24:mi:ss'));
 Insert into BOOKING (LOCATIONID,EVENTID,EVENTSTART,EVENTEND) values (110119,106,to_date('04-NOV-13 09:00:00','yyyy-mm-dd hh24:mi:ss'),to_date('04-NOV-13 12:00:00','yyyy-mm-dd hh24:mi:ss'));
-Insert into BOOKING (LOCATIONID,EVENTID,EVENTSTART,EVENTEND) values (110019,107,to_date('04-NOV-13 11:00:00','yyyy-mm-dd hh24:mi:ss'),to_date('04-NOV-13 12:00:00','yyyy-mm-dd hh24:mi:ss'));
 
 REM INSERTING into CONFIGURATION
 SET DEFINE OFF;
