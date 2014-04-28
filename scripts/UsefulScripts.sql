@@ -92,10 +92,15 @@ SELECT TO_CHAR(TO_DATE(TO_CHAR(BOOKINGDATE || ' ' || STARTTIME), 'dd-mm-yy hh24:
 
 DELETE FROM TEMPDATES;
 
-UPDATE TEMPDATES
-SET ENDDATE = (SELECT TO_DATE(TO_CHAR(BOOKINGDATE || ' ' || ENDTIME), 'dd-mm-yy hh24:mi:ss')
-               FROM BOOKING
-               WHERE TEMPDATES.EVENTID = 110015);
+UPDATE EVENTEND BookingNew
+SET ENDDATE = (SELECT TO_DATE(TO_CHAR(BOOKINGDATE || ' ' || ENDTIME), 'DD-MON-RR hh24:mi:ss')
+               FROM BOOKING BookingOld
+               WHERE BookingOld.BOOKINGID = BookingNew.BOOKINGID);
+               
+UPDATE EVENTSTART BookingNew
+SET ENDDATE = (SELECT TO_DATE(TO_CHAR(BOOKINGDATE || ' ' || STARTTIME), 'DD-MON-RR hh24:mi:ss')
+               FROM BOOKING BookingOld
+               WHERE BookingOld.BOOKINGID = BookingNew.BOOKINGID);
 
 SELECT TO_CHAR(EVENTEND, 'yyyy-mm-dd hh24:mi:ss') as EVENTEND FROM BOOKING;
 
@@ -146,4 +151,11 @@ SELECT SUM(HORSESHOECAPACITY), SUM(ISLANDCAPACITY), SUM(ROWCAPACITY) FROM CONFIG
 
 SELECT SUM(LENGTH), SUM(WIDTH) FROM LOCATION;
 
-select event.organiser, event.staffid, staff.staffid, staff.name from event inner join staff on event.staffid = staff.staffid;
+select event.staffid AS ORGANISERID, staff.staffid, staff.name from event inner join staff on event.staffid = staff.staffid;
+
+SELECT EVENT.STAFFID AS EVENTORGANISERID, EVENTPURPOSE, STAFF.STAFFID, STAFF.NAME
+FROM EVENT
+INNER JOIN STAFF 
+ON EVENT.STAFFID = STAFF.STAFFID;
+
+SELECT TO_CHAR(EVENTSTART, 'DD-MON-RR hh24:mi:ss') AS EVENTEND FROM BOOKING;
